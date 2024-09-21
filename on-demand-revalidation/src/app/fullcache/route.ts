@@ -1,7 +1,9 @@
 // This file caches the entire route
-
+// This is just for illustration purposes, inside unstable cache, its just better to just add Db Operations
 import { unstable_cache } from "next/cache";
 import { NextResponse } from "next/server";
+
+export const dynamic = "force-dynamic";
 
 const getResponse = unstable_cache(async () => {
   const data = await fetch(
